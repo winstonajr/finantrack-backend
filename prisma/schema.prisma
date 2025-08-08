@@ -1,0 +1,38 @@
+// Define o "gerador" do cliente, dizendo que vamos usar o Prisma Client em JavaScript.
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Define a fonte de dados, apontando para a variável no nosso arquivo .env.
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Modelando nossa tabela de Usuários.
+model User {
+  id        Int      @id @default(autoincrement()) // Chave primária, número inteiro, autoincremento.
+  name      String
+  email     String   @unique // O email de cada usuário deve ser único.
+  password  String   // Vamos guardar a senha "hasheada" aqui.
+  createdAt DateTime @default(now()) // Data de criação, preenchida automaticamente.
+  updatedAt DateTime @updatedAt      // Data de atualização, atualizada automaticamente.
+  transactions Transaction[] 
+  // Mapeia o nome do model "User" para a tabela "users" no banco de dados.
+  @@map("users")
+}
+model Transaction {
+  id          Int      @id @default(autoincrement())
+  description String
+  amount      Float    // Usaremos Float para valores com centavos
+  type        String   // Será 'income' (receita) ou 'expense' (despesa)
+  date        DateTime
+
+  // Relação: Esta transação pertence a um usuário.
+  userId      Int
+  user        User     @relation(fields: [userId], references: [id])
+
+  createdAt   DateTime @default(now())
+
+  @@map("transactions")
+}

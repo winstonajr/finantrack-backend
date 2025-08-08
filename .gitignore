@@ -1,0 +1,22 @@
+# Arquivos de Dependências
+# Esta pasta é recriada com 'npm install' e não deve ser versionada.
+node_modules/
+
+# Arquivos de Ambiente
+# Contém segredos e chaves de API. Use .env.example como template.
+.env
+
+# Logs
+# Arquivos de log de debug e de erros.
+npm-debug.log*
+*.log
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de Editor de Código / IDE
+.vscode/
+.idea/
