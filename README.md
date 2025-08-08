@@ -8,7 +8,7 @@
 
 API RESTful completa para gerenciamento financeiro pessoal. Este projeto foi construído do zero com foco em boas práticas de desenvolvimento, segurança e escalabilidade, servindo como a base de backend para a plataforma FinanTrack.
 
-**[Acesse a API em produção aqui!](https://finantrack-backend.onrender.com/api/health)** (Substitua pela sua URL do Render)
+**[Acesse a API em produção aqui!](https://finantrack-backend-q2oq.onrender.com/api/health)**
 
 ## ✨ Funcionalidades
 
