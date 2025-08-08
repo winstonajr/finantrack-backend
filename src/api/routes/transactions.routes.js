@@ -9,5 +9,7 @@ router.use(authMiddleware)
 router.post('/', transactionController.create)
 router.get('/', transactionController.findAllByUser)
 router.get('/summary', transactionController.getSummary)
+router.delete('/:id', transactionController.remove) // <-- NOSSA NOVA ROTA
+router.patch('/:id', transactionController.update) // <-- NOSSA NOVA ROTA
 
 export default router
