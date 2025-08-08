@@ -33,7 +33,7 @@ Siga os passos abaixo para executar a API na sua máquina.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/SEU_USUARIO/finantrack-backend.git](https://github.com/SEU_USUARIO/finantrack-backend.git)
+    git clone https://github.com/winstonajr/finantrack-backend.git
     ```
 
 2.  **Navegue até a pasta do projeto:**
