@@ -10,6 +10,6 @@ router.post('/', transactionController.create)
 router.get('/', transactionController.findAllByUser)
 router.get('/summary', transactionController.getSummary)
 router.delete('/:id', transactionController.remove)
-router.post('/:id', transactionController.update)
+router.put('/:id', transactionController.update)
 
 export default router
